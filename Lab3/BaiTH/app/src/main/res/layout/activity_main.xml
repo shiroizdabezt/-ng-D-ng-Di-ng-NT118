@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Age"/>
+
+    <EditText
+        android:id="@+id/editTextStudentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Student Number"/>
+
+    <EditText
+        android:id="@+id/editAVGScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="AVG Score"/>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginStart="145dp"
+        android:textSize="20dp"
+        android:background="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStudents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
