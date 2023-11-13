@@ -17,7 +17,14 @@
             android:layout_height="227dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
-            android:src="@drawable/uit_logo" />
+            android:src="@drawable/uit_logo"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:id="@+id/test"
+            />
 
     </FrameLayout>
 

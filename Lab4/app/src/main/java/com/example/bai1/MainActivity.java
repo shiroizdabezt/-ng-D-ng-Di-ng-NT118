@@ -2,10 +2,17 @@ package com.example.bai1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -17,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             btnZoomOutCode, btnRotateXml,
             btnRotateCode, btnMoveXml, btnMoveCode, btnSlideUpXml, btnSlideUpCode,
             btnBounceXml,
-            btnBounceCode, btnCombineXml, btnCombineCode;
+            btnBounceCode, btnCombineXml, btnCombineCode,
+            test;
     private ImageView ivUitLogo;
     private Animation.AnimationListener animationListener;
     @Override
@@ -27,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
         findViewsByIds();
         initVariables();
+
+        test = findViewById(R.id.test);
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+
+
+                overridePendingTransition(R.anim.anim_move_in_right, R.anim.anim_move_out_right);
+            }
+        });
 
         /*final Animation Fade_In = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_fade_in);
         final Animation Fade_Out = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_fade_in);
@@ -51,8 +72,26 @@ public class MainActivity extends AppCompatActivity {
         handleClickAnimationXml(btnCombineXml, R.anim.anim_combine);
 
 
+        handleClickAnimationCode(btnFadeInCode, initFadeInAnimation());
+        handleClickAnimationCode(btnFadeOutCode, initFadeOutAnimation());
+        handleClickAnimationCode(btnBlinkCode, initBlinkAnimation());
+        handleClickAnimationCode(btnZoomInCode, initZoomInAnimation());
+        handleClickAnimationCode(btnZoomOutCode, initZoomOutAnimation());
+        handleClickAnimationCode(btnRotateCode, initRotateAnimation());
+        handleClickAnimationCode(btnMoveCode, initMoveAnimation());
+        handleClickAnimationCode(btnSlideUpCode, initSlideUpAnimation());
+        handleClickAnimationCode(btnBounceCode, initBounceAnimation());
+        handleClickAnimationCode(btnCombineCode, initCombineAnimation());
+
+
     }
 
+   /* public void openActivity(View view)
+    {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.anim_move_in_right, R.anim.anim_move_out_right);
+    }*/
     private void initVariables() {
         animationListener = new Animation.AnimationListener() {
             @Override
@@ -78,6 +117,115 @@ public class MainActivity extends AppCompatActivity {
                 ivUitLogo.startAnimation(animation);
             }
         });
+    }
+
+    private void  handleClickAnimationCode(Button btn, final Animation animation) {
+        // Handle onclickListenner to start animation
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivUitLogo.startAnimation(animation);
+            }
+        });
+    }
+
+    private Animation initFadeInAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(0, 1);
+        animation.setDuration(1000);
+        animation.setFillAfter(true);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
+
+    private Animation initFadeOutAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(1, 0);
+        animation.setDuration(1000);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
+
+    private Animation initBlinkAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(0, 1);
+        animation.setDuration(300);
+        animation.setRepeatMode(Animation.REVERSE);
+        animation.setRepeatCount(3);
+        return animation;
+    }
+
+    private Animation initZoomInAnimation()
+    {
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 3f, 1f, 3f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(1000);
+
+        return scaleAnimation;
+    }
+
+    private Animation initZoomOutAnimation()
+    {
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 0.5f, 1f, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(1000);
+
+        return scaleAnimation;
+    }
+
+    private Animation initRotateAnimation()
+    {
+        RotateAnimation rotateAnimation = new RotateAnimation(0, 360,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnimation.setDuration(600);
+        rotateAnimation.setRepeatMode(Animation.RESTART);
+        rotateAnimation.setRepeatCount(2);
+        return rotateAnimation;
+    }
+
+    private Animation initMoveAnimation()
+    {
+        TranslateAnimation translateAnimation = new TranslateAnimation(0, 1000, 0, 0);
+        translateAnimation.setDuration(800);
+        return translateAnimation;
+    }
+
+    private Animation initSlideUpAnimation()
+    {
+        TranslateAnimation translateAnimation = new TranslateAnimation(
+                0, 0,
+                0, 0,
+                0, 1,
+                0, 1);
+        translateAnimation.setDuration(800);
+        return translateAnimation;
+    }
+
+    private Animation initBounceAnimation()
+    {
+        AlphaAnimation animation = new AlphaAnimation(0, 1);
+        animation.setDuration(3000);
+        animation.setFillAfter(true);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
+
+    private Animation initCombineAnimation()
+    {
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 3f, 1f, 3f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(4000);
+
+        RotateAnimation rotateAnimation = new RotateAnimation(0, 360,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnimation.setDuration(500);
+        rotateAnimation.setInterpolator(new LinearInterpolator());
+        rotateAnimation.setRepeatMode(Animation.RESTART);
+        rotateAnimation.setRepeatCount(2);
+
+        AnimationSet animationSet = new AnimationSet(true);
+        animationSet.addAnimation(scaleAnimation);
+        animationSet.addAnimation(rotateAnimation);
+        return animationSet;
     }
 
     private void findViewsByIds() {
