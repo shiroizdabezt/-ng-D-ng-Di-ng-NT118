@@ -9,6 +9,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
@@ -38,13 +39,23 @@ public class MainActivity extends AppCompatActivity {
 
         test = findViewById(R.id.test);
 
-        test.setOnClickListener(new View.OnClickListener() {
+        /*test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(intent);
 
 
+                overridePendingTransition(R.anim.anim_move_in_right, R.anim.anim_move_out_right);
+            }
+        });*/
+
+        ivUitLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
                 overridePendingTransition(R.anim.anim_move_in_right, R.anim.anim_move_out_right);
             }
         });
@@ -191,22 +202,20 @@ public class MainActivity extends AppCompatActivity {
 
     private Animation initSlideUpAnimation()
     {
-        TranslateAnimation translateAnimation = new TranslateAnimation(
-                0, 0,
-                0, 0,
-                0, 1,
-                0, 1);
-        translateAnimation.setDuration(800);
-        return translateAnimation;
+        ScaleAnimation scaleAnimation = new ScaleAnimation( 1.0f, 1.0f, 1.0f, 0.0f,
+                ScaleAnimation.RELATIVE_TO_SELF, 1.0f, ScaleAnimation.RELATIVE_TO_SELF, 0.0f);
+        scaleAnimation.setDuration(500);
+
+        return scaleAnimation;
     }
 
     private Animation initBounceAnimation()
     {
-        AlphaAnimation animation = new AlphaAnimation(0, 1);
-        animation.setDuration(3000);
-        animation.setFillAfter(true);
-        animation.setAnimationListener(animationListener);
-        return animation;
+        ScaleAnimation scaleAnimation = new ScaleAnimation( 1.0f, 1.0f, 0.0f, 1.0f, ScaleAnimation.RELATIVE_TO_SELF, 1.0f, ScaleAnimation.RELATIVE_TO_SELF, 0.0f);
+        scaleAnimation.setDuration(500);
+        scaleAnimation.setInterpolator(new BounceInterpolator());
+
+        return scaleAnimation;
     }
 
     private Animation initCombineAnimation()

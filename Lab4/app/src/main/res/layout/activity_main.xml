@@ -18,6 +18,7 @@
             android:layout_gravity="center"
             android:scaleType="fitCenter"
             android:src="@drawable/uit_logo"
+            android:clickable="true"
             />
         <Button
             android:layout_width="wrap_content"
