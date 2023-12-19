@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DoAn"
+        tools:targetApi="31">
+        <activity
+            android:name=".GrammarWord.GrammarTu10"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu9"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu8"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu7"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder6.GrammarTu6_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder6.GrammarTu6_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu6"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder5.GrammarTu5_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder5.GrammarTu5_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder5.GrammarTu5_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder5.GrammarTu5_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu5"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder4.GrammarTu4_5"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder4.GrammarTu4_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder4.GrammarTu4_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder4.GrammarTu4_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder4.GrammarTu4_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder3.GrammarTu3_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder3.GrammarTu3_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder2.GrammarTu2_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder2.GrammarTu2_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder2.GrammarTu2_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.Folder2.GrammarTu2_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau15"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau14"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder13.GrammarCau13_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder13.GrammarCau13_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder13.GrammarCau13_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder13.GrammarCau13_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau13"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau12"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau11"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau10"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder9.GrammarCau9_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder9.GrammarCau9_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau9"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau8"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder7.GrammarCau7_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder7.GrammarCau7_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau7"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder6.GrammarCau6_6"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder6.GrammarCau6_5"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder6.GrammarCau6_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder6.GrammarCau6_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder6.GrammarCau6_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder6.GrammarCau6_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau6"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder5.GrammarCau5_5"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder5.GrammarCau5_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder5.GrammarCau5_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder5.GrammarCau5_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder5.GrammarCau5_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau5"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder3.GrammarCau3_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder3.GrammarCau3_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder3.GrammarCau3_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder2.GrammarCau2_2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder2.GrammarCau2_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau2"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_12"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_11"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_10"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_8"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_6"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_7"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_5"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_9"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_4"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_3"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.grammar_cau1_2"
+            android:exported="false" />
+        <activity
+            android:name=".grammar_cau12"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu1_1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.Folder1.GrammarCau1_1"
+            android:exported="false" />
+        <activity
+            android:name=".Test.TestVocabulary"
+            android:exported="false" />
+        <activity
+            android:name=".Test.TestGrammar"
+            android:exported="false" />
+        <activity
+            android:name=".Vocabulary.Voc1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarWord.GrammarTu1"
+            android:exported="false" />
+        <activity
+            android:name=".GrammarCau.GrammarCau1"
+            android:exported="false" />
+        <activity
+            android:name=".Account"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainMenuFolder.LeaderBoard"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuFolder.Test"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuFolder.Vocabulary"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuFolder.GrammarTu"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuFolder.GrammarCau"
+            android:exported="false" />
+        <activity
+            android:name=".Home.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenu"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Forget"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SignUp"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
